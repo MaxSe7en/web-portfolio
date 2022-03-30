@@ -1,0 +1,57 @@
+
+.about-us-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us__quote{
+    width: 70%;
+    text-align: center;
+}
+
+.about-us__quote h1{
+    font-size: 3rem;
+}
+
+.about-us__gist{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin-top: 1rem;
+}
+.about-us__what-we-do{
+
+    margin-left: 0.5rem;
+}
+
+.about-us__who-we-are{
+    margin-right: 0.5rem !important;
+}
+hr{
+    height: 2px !important;
+    color: #E03A3C;
+}
+.values-item .bx{
+    color: #E03A3C;
+    font-size: 3rem;
+}
+.card:hover{
+ background:#E03A3C;
+ color: #FFF;
+ transition: 0.7s ease-in-out;
+}
+
+
+
+.values-items{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px){
+    .about-us__gist{
+        flex-wrap: wrap;
+    }
+}

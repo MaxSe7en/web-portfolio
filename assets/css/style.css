@@ -59,6 +59,9 @@ body::-webkit-scrollbar-track {
   justify-content: center;
   
 }
+/* .nav-link{
+  width: fit-content;
+} */
 .image-portfolio{
   height: 500px;
   width: 300px !important;
@@ -116,6 +119,18 @@ h1, h2, h3, h4, h5, h6, m {
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+  .nav-tabs{
+    /* justify-content: start !important;
+    align-items: center; */
+ margin:0;
+  }
+  .nav-item{
+margin: 0 1rem !important
+  }
+  .nav-link{
+    width: fit-content;
+
   }
 }
 /*--------------------------------------------------------------
