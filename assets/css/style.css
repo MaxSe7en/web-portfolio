@@ -22,7 +22,7 @@ a:hover {
   color: #e76668;
   text-decoration: none;
 }
-
+/* MY CSS  */
 .image-tabs{
   height: 50px;
   width: 50px;
@@ -32,10 +32,43 @@ a:hover {
   padding: 1rem;
   width: 160px;
   height: 160px;
+  font-weight: 500;
+  font-size: 15px;
 }
 .my-btn:hover{
   background-color: #11111167;
+  color: #FFF;
 }
+m{
+  margin-top: 1rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #f31d1d8f;
+}
+
+.image-holder{
+  width: inherit;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.image-portfolio{
+  height: 500px;
+  width: 300px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #E03A3C;
+  outline: 1px solid slategrey;
+}
+/* MY CSS END */
 
 body.active {
   background-color: #3a3939;
