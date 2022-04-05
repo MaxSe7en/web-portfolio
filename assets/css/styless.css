@@ -42,14 +42,33 @@ hr{
  transition: 0.7s ease-in-out;
 }
 
-
-
 .values-items{
     margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* .mobile__app .card{
+    background-color: aquamarine;
+} */
+/* .mobile__app .card h4:hover{
+    color: #FFF !important;
+} */
+
+.web__app_back_end{
+height: 250px;
+}
+
+.ui__design_soft{
+    height: 500px;
+}
+
+.ui__design_adapt{
+    height: 10.5rem;
+}
+
+
 @media (max-width: 768px){
     .about-us__gist{
         flex-wrap: wrap;
