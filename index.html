@@ -48,24 +48,6 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Solutions</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Transport Booking App</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Online Store Management</a></li>
-              <li><a href="#">Accounting Software</a></li>
-              <li><a href="#">Business Automation</a></li>
-            </ul>
-          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -225,6 +207,10 @@
             <a class="nav-link m-0 border-0 active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <p class="fw-bold">Mobile</p>
             </a>
+          <li class="nav-item  col-2">
+            <a class="nav-link m-0 border-0" data-bs-toggle="tab" data-bs-target="#tab-5">
+              <p class="fw-bold text-center">E Commerce</p>
+            </a>
           </li>
           <li class="nav-item col-2">
             <a class="nav-link border-0" data-bs-toggle="tab" data-bs-target="#tab-2">
@@ -354,6 +340,7 @@
               </div>
             </div>
           </div>
+
           <div class="tab-pane" id="tab-4">
             <div class="row">
               <div
@@ -373,6 +360,22 @@
                 <button class="btn my-btn border-0 m-2 d-flex justify-content-center align-items-center  flex-column">
                   <img src="assets/img/icons8-python-150.png" class="img-fluid image-tabs" alt="android">
                   <m>Python</m>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-5">
+            <div class="row">
+              <div
+                class="col-lg d-flex justify-content-center align-items-center flex-wrap order-2 order-lg mt-3 mt-lg-0">
+                <button class="btn border-0 m-2 d-flex justify-content-center align-items-center my-btn flex-column">
+                  <img src="assets/img/icons8-wordpress-240.png" class="img-fluid image-tabs" alt="android">
+                  <m>WordPress</m>
+                </button>
+                <button class="btn border-0 m-2 d-flex justify-content-center align-items-center my-btn flex-column">
+                  <img src="assets/img/icons8-shopify-150.png" class="img-fluid image-tabs" alt="android">
+                  <m>Shopify</m>
                 </button>
               </div>
             </div>
@@ -415,7 +418,7 @@
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-shop"></i>
-              <h4><a href="#">E-commerce Store Development</a></h4>
+              <h4><a href="what-we-do.html#e-commerce-development">E-commerce Store Development</a></h4>
               <p>Our talented store management team can help you develop top-notch stores, manage your ads, identify
                 private suppliers, and even produce video ads to promote your products and stores.</p>
             </div>
@@ -461,7 +464,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-binoculars"></i>
               <h4>
-                <a href="#">
+                <a href="what-we-do.html#quality-assurance">
                   Quality Assurance Services
                 </a>
               </h4>
@@ -471,7 +474,7 @@
               </p>
             </div>
           </div>
-          
+
         </div>
 
       </div>
@@ -493,6 +496,7 @@
               <li data-filter=".filter-mobile">Mobile</li>
               <li data-filter=".filter-windows">Windows</li>
               <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-store">Store</li>
             </ul>
           </div>
         </div>
@@ -518,7 +522,7 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/mobile/kiddie.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Kiddie Options E-Commence</h4>
+                <h4>Kiddie Options E-Commerce</h4>
                 <p>MySQL, PHP, JQuery</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/mobile/kiddie.png" data-gallery="portfolioGallery"
@@ -651,6 +655,21 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/website/bank-web-app.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Banking Web App</h4>
+                <p>Vue.js, Nodejs, Express, MongoDB</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/website/bank-web-app.png" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Banking Web App"><i class="bx bx-plus"></i></a>
+                  <a href="banking-app.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/mobile/everquik.png" class="img-fluid" alt="">
@@ -666,33 +685,51 @@
             </div>
           </div>
 
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-store">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/e-store/e-store-pet-2.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>Pet Store</h4>
+                <p>Shopify</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/e-store/e-store-pet-2.png" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Pet Store"><i class="bx bx-plus"></i></a>
+                  <a href="pet-store.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-store">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/e-store/e-store.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Gym Accessories Store</h4>
+                <p>Shopify</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/e-store/e-store.png" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Gym Accessories Store"><i class="bx bx-plus"></i></a>
+                  <a href="gym-accessories-store.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-store">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/e-store/e-store-accesories.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Kitchen Accessories Store</h4>
+                <p>Shopify</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/e-store/e-store-accesories.png" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox" title="Kitchen Accessories Store"><i class="bx bx-plus"></i></a>
+                  <a href="kitchen-accessories-store.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
         </div>
 
@@ -815,7 +852,8 @@
               <h3>Free Support</h3>
               <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
               <p style="padding-bottom: 1.5rem;">
-                We offer 3 month free technical support to our clients after the application has been deployed. This is to give our clients absolute satisfaction.
+                We offer 3 month free technical support to our clients after the application has been deployed. This is
+                to give our clients absolute satisfaction.
               </p>
               <div class="btn-wrap">
                 <a href="#contact" class="btn-buy">Talk to Us</a>
@@ -828,7 +866,8 @@
               <h3>Business Startups</h3>
               <!-- <h4><sup>$</sup>19<span> / month</span></h4> -->
               <p>
-               Are you a startup business? We have streamlined offers to help you grow your business, achieve your vision and targets. Come on board let us achieve this together. 
+                Are you a startup business? We have streamlined offers to help you grow your business, achieve your
+                vision and targets. Come on board let us achieve this together.
               </p>
               <div class="btn-wrap">
                 <a href="#contact" class="btn-buy">Talk to Us</a>

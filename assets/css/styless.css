@@ -68,6 +68,9 @@ height: 250px;
     height: 10.5rem;
 }
 
+.e__commerce_list{
+    list-style: none;
+}
 
 @media (max-width: 768px){
     .about-us__gist{
