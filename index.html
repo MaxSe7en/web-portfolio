@@ -1123,20 +1123,20 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="" method="post" role="form" class="php-email-form" id="contact-form-unique">
               <div class="row">
                 <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name-unique" placeholder="Your Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email-unique" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject-unique" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message-unique" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -1242,6 +1242,43 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.getElementById('contact-form-unique').addEventListener('submit', (evt) => {
+      evt.preventDefault();
+
+      const name = document.getElementById('name-unique').value
+      const email = document.getElementById('email-unique').value
+      const subject = document.getElementById('subject-unique').value
+      const message = document.getElementById('message-unique').value
+
+      console.log(name)
+      console.log(email)
+      console.log(subject)
+      console.log(message)
+      console.log(name)
+
+      Email.send({
+        SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
+        To: 'mjadarko@gmail.com,iferch.techlead@gmail.com',
+        From: "arc.solutions.gh@gmail.com",
+        Subject: subject,
+        Body: "<h1>Hello world...</h1>"
+    }).then(
+        (message) => {
+          console.log(message)
+          // do something else if you wish to ===
+            if (message === "OK") {
+                alert("We have received your message, Thank you!");
+                window.location.reload()
+
+            } else {
+                alert("Your message was not sent, check your internet connection");
+            }
+        }
+    );
+    })
+  </script>
 </body>
 
 </html>
