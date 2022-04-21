@@ -6,11 +6,11 @@
 (function () {
   "use strict";
 
-  // let forms = document.querySelectorAll('.php-email-form');
+  let forms = document.querySelectorAll('#contact-form-unique');
 
-  // forms.forEach(function (e) {
-  //   e.addEventListener('submit', sendContact);
-  // });
+  forms.forEach(function (e) {
+    e.addEventListener('submit', sendContact);
+  });
 
   function php_email_form_submit(thisForm, action, formData) {
     fetch(action, {
@@ -43,57 +43,93 @@
 
 
   function resetInputs() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("subject").value = "";
-    document.getElementById("message").value = "";
+    document.getElementById('name-unique').value = "";
+    document.getElementById('email-unique').value = "";
+    document.getElementById('subject-unique').value = "";
+    document.getElementById('message-unique').value = "";
   }
 
-  // function sendContact(evt) {
+  function sendContact(evt) {
+    evt.preventDefault();
+
+    let thisForm = this;
+
+
+
+    thisForm.querySelector('.loading').classList.add('d-block');
+    thisForm.querySelector('.error-message').classList.remove('d-block');
+    thisForm.querySelector('.sent-message').classList.remove('d-block');
+
+    const name = document.getElementById('name-unique').value
+    const email = document.getElementById('email-unique').value
+    const subject = document.getElementById('subject-unique').value
+    const _message = document.getElementById('message-unique').value
+    console.log(`this is contact`)
+    const body = `${_message}
+    **sent by**: ${name}
+    `
+    Email.send({
+      SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
+      To: 'mjadarko@gmail.com,iferch.techlead@gmail.com, nanayawfixing@gmail.com, arc.solutions.gh@gmail.com, ic1914yy@gmail.com',
+      From: 'arc.solutions.gh@gmail.com',
+      Subject: subject,
+      Body: _message
+    }).then(
+      (message) => {
+        if (message === "OK") {
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          resetInputs();
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.querySelector('.error-message').classList.remove('d-block');
+          console.log(`this is the message ${message}`)
+          // alert("We have received your message, Thank you!");
+        } else {
+          // alert("Your message was not sent, check your internet connection");
+          console.log(`this is the message ${message}`)
+          displayError(thisForm)
+        }
+      }
+    );
+  }
+
+  contact.addEventListener("submit", sendContact);
+
+  // document.getElementById('contact-form-unique').addEventListener('submit', (evt) => {
   //   evt.preventDefault();
 
-  //   let thisForm = this;
+  //   const name = document.getElementById('name-unique').value
+  //   const email = document.getElementById('email-unique').value
+  //   const subject = document.getElementById('subject-unique').value
+  //   const message = document.getElementById('message-unique').value
 
+  //   console.log(name)
+  //   console.log(email)
+  //   console.log(subject)
+  //   console.log(message)
+  //   console.log(name)
 
-
-  //   thisForm.querySelector('.loading').classList.add('d-block');
-  //   thisForm.querySelector('.error-message').classList.remove('d-block');
-  //   thisForm.querySelector('.sent-message').classList.remove('d-block');
-
-  //   const name = document.getElementById("name").value;
-  //   const email = document.getElementById("email").value;
-  //   const subject = document.getElementById("subject").value;
-  //   const _message = document.getElementById("message").value;
-  //   console.log(`this is contact`)
-  //   const body = `${_message}
-  //   **sent by**: ${name}
-  //   `
   //   Email.send({
-  //     SecureToken: "edc7ed75-0ad6-4caf-8e1f-244dba901168",
-  //     Host: "smtp.gmail.com",
-  //     Username: "nanayawfixing@gmail.com",
-  //     Password: "*******",
-  //     To: 'nanayawfixing@gmail.com',
-  //     From: email,
+  //     SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
+  //     To: 'mjadarko@gmail.com,iferch.techlead@gmail.com',
+  //     From: "arc.solutions.gh@gmail.com",
   //     Subject: subject,
-  //     Body: body
-  //   }).then(
+  //     Body: message
+  // }).then(
   //     (message) => {
-  //       if (message === "OK") {
-  //         thisForm.querySelector('.loading').classList.remove('d-block');
-  //         resetInputs(); 
-  //         thisForm.querySelector('.sent-message').classList.add('d-block');
-  //         // alert("We have received your message, Thank you!");
-  //       } else {
-  //         // alert("Your message was not sent, check your internet connection");
-  //         console.log(`this is the message ${message}`)
-  //         displayError(thisForm)
-  //       }
-  //     }
-  //   );
-  // }
+  //       console.log(message)
+  //       // do something else if you wish to ===
+  //         if (message === "OK") {
+  //             alert("We have received your message, Thank you!");
+  //             window.location.reload()
 
-  // contact.addEventListener("submit", sendContact);
+  //         } else {
+  //             alert("Your message was not sent, check your internet connection");
+  //         }
+  //     }
+  // );
+  // })
+
+
 
   function displayError(thisForm) {
     thisForm.querySelector('.loading').classList.remove('d-block');
