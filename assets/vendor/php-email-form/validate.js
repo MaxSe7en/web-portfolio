@@ -67,6 +67,7 @@
     console.log(`this is contact`)
     const body = `${_message}
     **sent by**: ${name}
+    **email**: ${email}
     `
     Email.send({
       SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
@@ -93,42 +94,6 @@
   }
 
   contact.addEventListener("submit", sendContact);
-
-  // document.getElementById('contact-form-unique').addEventListener('submit', (evt) => {
-  //   evt.preventDefault();
-
-  //   const name = document.getElementById('name-unique').value
-  //   const email = document.getElementById('email-unique').value
-  //   const subject = document.getElementById('subject-unique').value
-  //   const message = document.getElementById('message-unique').value
-
-  //   console.log(name)
-  //   console.log(email)
-  //   console.log(subject)
-  //   console.log(message)
-  //   console.log(name)
-
-  //   Email.send({
-  //     SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
-  //     To: 'mjadarko@gmail.com,iferch.techlead@gmail.com',
-  //     From: "arc.solutions.gh@gmail.com",
-  //     Subject: subject,
-  //     Body: message
-  // }).then(
-  //     (message) => {
-  //       console.log(message)
-  //       // do something else if you wish to ===
-  //         if (message === "OK") {
-  //             alert("We have received your message, Thank you!");
-  //             window.location.reload()
-
-  //         } else {
-  //             alert("Your message was not sent, check your internet connection");
-  //         }
-  //     }
-  // );
-  // })
-
 
 
   function displayError(thisForm) {
