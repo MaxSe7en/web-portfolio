@@ -308,6 +308,29 @@ m {
     display: none;
   }
 }
+
+.me-auto-sm {
+  display: none;
+}
+@media (max-width: 340px) {
+  .get-started-btn{
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .me-auto {
+    display: none;
+  }
+  .me-auto-sm {
+    display: flex ;
+    height: 60px;
+    margin-top: 0;
+    overflow: hidden;
+  }
+}
+
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -441,7 +464,7 @@ m {
     font-size: 18px;
     line-height: 24px;
   }
-  .logo{
+  .logo {
     font-size: 20px;
   }
 }
