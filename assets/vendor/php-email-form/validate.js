@@ -65,8 +65,8 @@
     **email**: ${email}
     `
     Email.send({
-      SecureToken: "***********************",
-      To: 'mjadarko@gmail.com,iferch.techlead@gmail.com, nanayawfixing@gmail.com, arc.solutions.gh@gmail.com, ic1914yy@gmail.com',
+      SecureToken: "de0e590b-cf3d-46da-bbab-484b58266047",
+      To: 'mjadarko@gmail.com,iferch.techlead@gmail.com, info@softscraft.com, nanayawfixing@gmail.com, arc.solutions.gh@gmail.com, ic1914yy@gmail.com',
       From: 'arc.solutions.gh@gmail.com',
       Subject: subject,
       Body: _message
